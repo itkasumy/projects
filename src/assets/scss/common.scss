@@ -1,0 +1,60 @@
+$color-primary: #FF644C;
+$color-primary--hover: #FF8370;
+$text-black: #666;
+$body-bg: #f5f5f5; //网页背景颜色
+$bg-gray--light: #fafafa; //浅灰背景
+$bg-gray--mid: #f0f0f0; //深灰背景
+$bd-gray: #ddd; //边框灰色
+$main-color: #666; //常规内容颜色
+$imp-color: #333; //主要内容颜色
+$green: #67C33A; //绿色
+
+$text-color-lev-3: #999;
+
+// 容器
+@mixin container {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+// 图片自适应
+@mixin img-responsive {
+  display: inline-block;
+  max-width: 100%;
+}
+
+// 单行文本溢出
+@mixin text-over {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 水平垂直居中， 父元素 relative
+@mixin layout-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 旋转动画
+@mixin rotating {
+  display: inline-block;
+  animation: rotating 1s infinite linear;
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg)
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}
+
+@mixin list-distance($distance) {
+  margin-left: $distance;
+  &:first-child {
+    margin-left: 0;
+  }
+}

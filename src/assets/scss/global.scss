@@ -1,0 +1,244 @@
+@import "element";
+@import "reset";
+@import "common";
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.u-float-r {
+  float: right;
+}
+
+//详情页面通用头部框架
+.u-detail-box {
+  padding: 60px 100px;
+}
+
+.c-detail-header {
+  margin-bottom: 60px;
+  border-bottom: 1px solid $bd-gray;
+  .title {
+    font-size: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+  }
+  .back {
+    font-size: 16px;
+    float: right;
+    i {
+      margin-left: 15px;
+    }
+  }
+  hr {
+    margin-bottom: 60px;
+  }
+}
+
+.u-pagination {
+  text-align: center;
+  padding: 20px 0
+}
+
+.u-small-box {
+  padding: 20px;
+}
+
+.u-mg-bt-20 {
+  margin-bottom: 20px;
+}
+
+.u-mg-bt-40 {
+  margin-bottom: 40px;
+}
+
+.u-pd-r-20 {
+  padding-right: 20px;
+}
+
+.u-align-r {
+  text-align: right;
+}
+
+.u-align-c {
+  text-align: center;
+}
+
+// 正在加载
+.loading {
+  clear: both;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.u-align-l {
+  text-align: left;
+}
+
+.u-float-l {
+  float: left;
+}
+
+.u-float-r {
+  float: right;
+}
+
+.u-primary {
+  color: $color-primary;
+}
+
+.u-inner-block {
+  display: inline-block;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
+}
+
+.u-word-break {
+  word-wrap: break-word;
+}
+
+.u-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.u-middle-all {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.u-pc-sidebar {
+  width: 280px;
+  float: left;
+  padding-right: 20px;
+}
+
+.u-panel {
+  background: #fff;
+  margin-bottom: 20px;
+  &.nobt {
+    margin-bottom: 0;
+  }
+}
+
+.u-pc-content {
+  background: #fff;
+  overflow: hidden;
+  min-height: 789px;
+  h2.content__title {
+    font-size: 20px;
+    padding: 35px 40px;
+  }
+  .top__header {
+    padding: 20px;
+    border-bottom: 1px solid $bd-gray;
+    &.no-bd {
+      border: 0;
+    }
+    h2 {
+      font-size: 16px;
+      display: inline-block;
+    }
+    .left__todo {
+      font-size: 16px;
+      i {
+        margin-right: 15px;
+      }
+    }
+    .right__todo {
+      float: right;
+    }
+  }
+}
+
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
+.c-dialog {
+  .el-dialog__header {
+    background: #F5F5F5;
+  }
+  .el-dialog__title {
+    color: #333;
+    font-size: 16px;
+  }
+  .el-dialog__body {
+    padding: 30px;
+  }
+  .el-form-item {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-form-item__label {
+    padding: 0 30px 0 0;
+  }
+}
+
+.c-form {
+  &.nobt {
+    .el-form-item {
+      margin-bottom: 0;
+    }
+  }
+  .el-form-item__label {
+    color: $main-color;
+  }
+  .el-form-item__content {
+    color: #000;
+    line-height: 18px;
+    margin-top: 11px;
+    word-wrap: break-word;
+  }
+}
+
+//垂直居中
+.c-dis-table {
+  display: table;
+  .v-middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+// 我是有底线的
+.bottom-line {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  padding: 30px 0;
+  text-align: center;
+  color: #ccc; //position: relative;
+  font-size: 15px;
+  @mixin line {
+    content: '';
+    width: 43%;
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px dotted #ebebeb;
+  }
+  &:before {
+    @include line;
+    left: 0;
+  }
+  &:after {
+    @include line;
+    right: 0;
+  }
+}
+
+.icon-rotating {
+  @include rotating;
+}

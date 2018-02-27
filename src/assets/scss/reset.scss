@@ -1,0 +1,53 @@
+@import "common";
+
+body {
+  background: $body-bg;
+  font-size: 14px;
+  color: $main-color;
+}
+
+div {
+  box-sizing: border-box;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: MicrosoftYaHei, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text-black;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $imp-color;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $bd-gray;
+}
+
+.pac-container {
+  z-index: 9999;
+}
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: .2;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+}
