@@ -1,0 +1,153 @@
+{
+  "zh":
+  {
+    "common":
+    {
+      "notic": "提示",
+      "ok": "确定",
+      "back": "返回",
+      "noOrder": "订单不存在",
+      "sub": "提交",
+      "notFull":"请填写完整"
+    },
+    "sideBar":
+    {
+      "nav":
+      {
+        "myOrder": "我的订单",
+        "myBalance": "我的资产",
+        "myAccount": "我的账号",
+        "myCollection": "我的收藏"
+      },
+      "subNav":
+      {
+        "delOrder": "外卖订单",
+        "evaOrder": "待评价订单",
+        "refOrder": "退款订单",
+        "balance": "账户余额",
+        "coupon": "优惠券",
+        "account": "账户信息",
+        "address": "外卖地址",
+        "collection": "我的收藏"
+      }
+    },
+    "order":
+    {
+      "topTitle": "近三个月订单",
+      "error": "未找到订单信息",
+      "status":
+      {
+        "sub": "已提交",
+        "hasPay": "已支付",
+        "shopTakeOrder": "商家接单 (待配送)",
+        "deliTakeOrder": "配送员已接单",
+        "distribution": "已取货(配送中)",
+        "disComplete": "已完成",
+        "hasCancle": "已取消",
+        "refunding": "申请退款中",
+        "refRefuse": "退款已拒绝",
+        "platExam": "平台审核中",
+        "refComplete": "退款完成",
+        "orderCancel": "订单已取消",
+        "evalComplete": "评论成功"
+      },
+      "payType":
+      {
+        "online": "在线支付",
+        "offline": "货到付款"
+      },
+      "listHeader":
+      {
+        "orderInfo": "订单信息",
+        "num": "商品数量",
+        "amount": "总价",
+        "status": "订单状态",
+        "todo": "操作"
+      },
+      "list":
+      {
+        "orderId": "订单编号",
+        "orderDetail": "订单详情",
+        "toPay": "前往支付",
+        "toCancel": "取消订单",
+        "toRefund": "申请退款",
+        "toDeliveyDetail": "查看配送详情",
+        "toEvaluate": "评价订单",
+        "toEvaluateDetail": "查看我的评价",
+        "toRefundDetail": "查看退款详情",
+        "toOrderDetail": "查看订单详情",
+        "alert":
+        {
+          "shopDeli": "您的订单由商家自行配送,请联系商家",
+          "refund": "申请退款,请联系商家",
+          "shopTelShow": "联系商家",
+          "shopTel": "商家电话"
+        }
+      },
+      "detail":
+      {
+        "orderDetail": "订单详情",
+        "orderInfo": "订单信息",
+        "deliInfo": "配送信息",
+        "orderCon": "订单内容",
+        "pay": "实付金额",
+        "refundDetail": "退款详情",
+        "refundInfo": "退款信息",
+        "deliDetail": "配送详情",
+        "evalOrder": "评价订单",
+        "evalTextarea":"菜品口味如何？对包装服务等还满意吗？",
+        "uploadImg":"上传图片:(最多不超过九张)",
+        "recomendGoods":"推荐菜品",
+        "evalDetail": "评价详情",
+        "evalTime": "评价时间",
+        "evalImgShow": "晒图展示",
+        "alert":{
+        	"uploadImgLim":"只能上传9张图片"
+        },
+        "label":
+        {
+          "status": "订单状态",
+          "num": "订单编号",
+          "orderTime": "订单时间",
+          "type": "支付方式",
+          "payTime": "支付时间",
+          "add": "配送地址",
+          "user": "联系人",
+          "userName": "联系电话",
+          "shopTel": "商家电话",
+          "refundAmount": "退款金额",
+          "refundType": "退款方式",
+          "refundTypeText": "退款到余额",
+          "amount": "订单总价",
+          "discount": "优惠抵扣",
+          "discountText": "用于抵扣的优惠券和现金券不返还",
+          "goodsRaty": "菜品评价",
+          "deliRaty": "配送速度"
+        },
+        "listHeader":
+        {
+          "food": "菜品",
+          "num": "数量",
+          "price": "单价",
+          "amount": "小计"
+        },
+        "step":
+        {
+          "sub": "订单已提交",
+          "take": "商家已接单",
+          "complete": "外卖已送达",
+          "agreeRefund": "商家同意退款",
+          "agreeRefundText": "商家已经发起了取消订单并退款的请求",
+          "refundComplete": "退款成功",
+          "refundAmount": "退款金额",
+          "refundAmountText": "已经返回您的平台账户余额，请注意查看",
+          "deliMan": "配送员",
+          "deli": "正在配送中",
+          "deliComplete": "外卖已送达",
+          "myPos": "我的位置",
+          "deliPhone": "配送员电话"
+        }
+      }
+    }
+  }
+}

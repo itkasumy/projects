@@ -1,0 +1,5 @@
+// px转化为rem
+@function toRem($px) {
+  $design: 37.5px;
+  @return ($px / $design) + rem;
+}
