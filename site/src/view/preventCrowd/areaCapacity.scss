@@ -1,0 +1,116 @@
+.areaCapacity {
+  .el-main {
+    padding: 20px;
+    .el-menu-item {
+      height: 34px;
+      line-height: 32px;
+      font-size: 18px;
+    }
+    .container {
+      .content {
+        width: 1100px;
+        .el-table {
+          margin-top: 10px;
+          padding: 10px;
+          border: 1px solid #dcdfe6;
+          border-radius: 4px;
+        }
+      }
+      .instruction {
+        height: 42px;
+        line-height: 42px;
+        padding-bottom: 5px;
+        text-align: left;
+        font-size: 12px;
+        color: #999;
+      }
+      .areaListContent {
+        height: 692px;
+        overflow-y: scroll;
+        >li {
+          float: left;
+          box-sizing: border-box;
+          width: 290px;
+          height: 310px;
+          margin: 0 36px 36px 0;
+          border: 1px solid #dfe9f4;
+          border-radius: 6px;
+          text-align: left;
+          &.active {
+            border: none;
+            box-shadow: 0 0 12px rgba(217, 228, 248, .5);
+          }
+          h2 {
+            height: 46px;
+            line-height: 46px;
+            padding-left: 20px;
+            color: #409eff;
+            font-size: 16px;
+          }
+          .capacityContent {
+            height: 260px;
+            overflow-y: scroll;
+            li {
+              .el-form-item {
+                margin: 0;
+                box-sizing: border-box;
+                height: 49px;
+                padding: 0 36px 17px 20px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      .tp-page {
+        overflow: hidden;
+        > div {
+          margin-right: 40px;
+          padding: 20px 0;
+        }
+      }
+      .topTools {
+        height: 32px;
+        line-height: 32px;
+        .batchSetting {
+          float: left;
+        }
+        .tp-right {
+          float: right;
+          .tp-result {
+            float: left;
+            .tp-result-count {
+              padding: 0 3px;
+              color: #409eff;
+              font-size: 16px;
+              font-weight: 700;
+            }
+            .el-button {
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+          .tp-input-group {
+            float: right;
+            ul {
+              li {
+                float: left;
+                &:nth-child(1) {
+                  margin: 0 20px 0 55px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .tp-page {
+      text-align: right;
+      overflow: hidden;
+      > div {
+        margin-right: 20px;
+        padding: 20px 0;
+      }
+    }
+  }
+}

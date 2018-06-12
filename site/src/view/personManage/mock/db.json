@@ -1,0 +1,38 @@
+{
+  "personList":[
+    {
+        "id":"0",
+        "personName":"0",
+        "sex": "0",
+        "img":"0",
+        "phoneamac1":"0",
+        "phoneamac2":"0",
+        "phoneamac3":"0",
+        "identity":"0",
+        "type":"0",
+        "address":"0",
+        "resource":"0",
+        "remark":"0",
+        "isControl":"布控",
+        "otherName":"xxx",
+        "time":"2018-02-02"
+    }
+],
+"posts": [
+              {
+                 "id": 1, 
+                "title": "json-server", 
+                "author": "typicode" 
+              }
+          ],
+ "comments": [
+              { 
+                "id": 1, 
+                "body": "some comment",
+                 "postId": 1   
+              } 
+            ], 
+   "profile":  { 
+                  "name": "typicode" 
+          }
+}

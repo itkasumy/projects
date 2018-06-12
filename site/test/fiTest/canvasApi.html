@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #cv {
+      display: block;
+      margin: 60px auto;
+      border: 1px solid #f60;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="cv"></canvas>
+</body>
+<script>
+  const cv = document.getElementById('cv')
+  cv.width = 1200
+  cv.height = 800
+  const ctx = cv.getContext('2d')
+  /* const img = new Image()
+  img.src = '../../static/images/0.png'
+  img.onload = () => {
+    ctx.drawImage(img, 0, 0, 200, 200)
+  } */
+  ctx.fillStyle = '#f20'
+  ctx.font = 'nomal 500 14px/19px 微软雅黑'
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.fillText('1', 600, 400)
+  console.log(ctx.measureText('1'))
+</script>
+</html>

@@ -1,0 +1,15 @@
+export const DEPT_AREA_GROUP = 'DEPT_AREA_GROUP'
+
+export const DEL_LIST = 'DEL_LIST'
+
+export const EMPTY_DEL_LIST = 'EMPTY_DEL_LIST'
+
+export const TRIGGER_ID = 'TRIGGER_ID'
+
+export const AREAS_TO_UPDATE = 'AREAS_TO_UPDATE'
+
+export const INIT_AREA_TO_UPDATE = 'INIT_AREA_TO_UPDATE'
+
+export const EMPTY_A_DEPT_AREAGROUP = 'EMPTY_A_DEPT_AREAGROUP'
+
+export const RESET_AREA_TO_UPDATE = 'RESET_AREA_TO_UPDATE'

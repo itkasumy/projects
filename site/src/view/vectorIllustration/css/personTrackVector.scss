@@ -1,0 +1,23 @@
+@import "./mixin.scss";
+
+#allmap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  .cvCont {
+    @include setMap(-410px, -220px, 2880px, 1620px, "../../assets/images/silverStar.png");
+    cursor: -webkit-grab;
+    position: relative;
+    &.active {
+      cursor: -webkit-grabbing;
+    }
+    #cv {
+      display: block; 
+    }
+  }
+}
+.mapAndVectorSwitch {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}

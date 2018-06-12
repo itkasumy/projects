@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gomoku</title>
+  <style>
+    #cv {
+      display: block;
+      margin: 60px auto;
+      background: rgb(241, 204, 149);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 0 6px #ccc;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="cv"></canvas>
+  <script>
+    const cv = document.getElementById('cv')
+    const ctx = cv.getContext('2d')
+    const [WIDTH, HEIGHT, GAP, RADIUS] = [450, 450, 30, 15]
+    let flag = true
+    cv.width = WIDTH
+    cv.height = HEIGHT
+    const arr = []
+    const WINS = []
+
+    for (let i = 0; i < 15; i++) {
+      for (let j = 0; j < 11; j++) {
+        WINS.push([])
+        for (let k = 0; k < 5; k++) {
+          WINS[WINS.length - 1].push([i, j + k])
+        }
+      }
+    }
+
+    for (let i = 0; i < 11; i++) {
+      for (let j = 0; j < 14; j++) {
+        WINS.push([])
+        for (let k = 0; k < 5; k++) {
+          WINS[WINS.length - 1].push([i + k, j])
+        }
+      }
+    }
+
+    for (let i = 0; i < 11; i++) {
+      for (let j = 0; j < 11; j++) {
+        WINS.push([])
+        for (let k = 0; k < 5; k++) {
+          WINS[WINS.length - 1].push([i + k, j + k])
+        }
+      }
+    }
+
+    for (let i = 4; i < 15; i++) {
+      for (let j = 0; j < 11; j++) {
+        WINS.push([])
+        for (let k = 0; k < 5; k++) {
+          WINS[WINS.length - 1].push([i - k, j + k])
+        }
+      }
+    }
+    console.log(WINS)
+
+    for (let i = 0; i < 15; i++) {
+      arr[i] = []
+      for (let j = 0; j < 15; j++) {
+        arr[i][j] = {
+          flag: true,
+          x: i,
+          y: j,
+          val: 0
+        }
+        if (i === j) {
+          ctx.beginPath()
+          ctx.moveTo(RADIUS + i * GAP, RADIUS)
+          ctx.lineTo(RADIUS + i * GAP, HEIGHT - RADIUS)
+          ctx.moveTo(RADIUS, RADIUS + i * GAP)
+          ctx.lineTo(WIDTH - RADIUS, RADIUS + i * GAP)
+          ctx.stroke()
+        }
+      }
+    }
+
+    const drawChess = (x, y, ctx, radius, flag) => {
+      ctx.beginPath()
+      const radialGradient = ctx.createRadialGradient(15 + x * 30 + 2, 15 + y * 30, 13, 15 + x * 30 + 2, 15 + y * 30, 0)
+      if (flag) {
+        radialGradient.addColorStop(0, '#0A0A0A')
+        radialGradient.addColorStop(1, '#636766')
+      } else {
+        radialGradient.addColorStop(0, '#D1D1D1')
+        radialGradient.addColorStop(1, '#F9F9F9')
+      }
+      ctx.fillStyle = radialGradient
+      ctx.arc(x, y, radius, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.closePath()
+    }
+
+    cv.addEventListener('click', (e) => {
+      let x = Math.floor((e.clientX - e.target.offsetLeft) / 30)
+      let y = Math.floor((e.clientY - e.target.offsetTop) / 30)
+      if (arr[x][y].flag) {
+        drawChess(x * GAP + 15, y * GAP + 15, ctx, RADIUS, flag)
+        arr[x][y].flag = false
+        flag = !flag
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,917 @@
+  /*强制修改input的placeholder样式*/
+
+  input::input-placeholder {
+      color: rgb(140, 213, 235) !important;
+  }
+
+  input::-webkit-input-placeholder {
+      color: rgb(140, 213, 235) !important;
+  }
+
+  input::-moz-placeholder {
+      color: rgb(140, 213, 235) !important;
+  }
+
+  .el-picker-panel__body-wrapper {
+      input::-webkit-input-placeholder {
+          color: rgb(192, 196, 204) !important;
+      }
+      input::-moz-input-placeholder {
+          color: rgb(192, 196, 204) !important;
+      }
+      input::-ms-input-placeholder {
+          color: rgb(192, 196, 204) !important;
+      }
+  }
+
+  .el-main.person-track {
+      padding: 0;
+      border: 1px solid #4ddcd0;
+  } // 上边的样式
+  #searchTop {
+      position: absolute;
+      left: -30px;
+      top: -30px;
+      height: 100px;
+      z-index: 999;
+      width: 100%; // 检索方式
+      .searchOption {
+          position: absolute;
+          left: 45px;
+          top: 40px;
+          height: 41px;
+          border: 1px solid #78d7ff;
+          .el-select {
+              .el-input {
+                  input {
+                      border-radius: 0px;
+                      height: 41px;
+                  }
+                  span {
+                      left: 85px;
+                      i {
+                          color: #daf7ff;
+                      }
+                  }
+              }
+              ul {
+                  position: relative;
+                  li {
+                      position: relative;
+                      left: 0;
+                      margin: 0;
+                      top: 0;
+                      &.selected {
+                          background-color: initial;
+                          border: 0px;
+                          span {
+                              color: #606266;
+                              white-space: nowrap;
+                              font-size: 14px;
+                              font-weight: normal;
+                              padding: 0;
+                              &::after {
+                                  display: none;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      } // 输入名字和身份证 或者人脸检索
+      .bodyId {
+          position: absolute;
+          left: 165px;
+          top: 40px;
+          border: 1px solid #78d7ff;
+          width: 4rem;
+          height: 41px;
+          background-color: #009bc6; // 人员检索
+          .personSearch {
+              .el-input {
+                  position: relative;
+                  left: -18px;
+                  input {
+                      background-color: #009bc6;
+                      padding: 10px;
+                      border-radius: 0;
+                      color: #9addf0;
+                      width: 3.29rem;
+                      height: 0.90rem;
+                  }
+              }
+              span {
+                  position: relative;
+                  right: -12px;
+                  display: inline-block;
+                  width: 19px;
+                  height: 20px;
+                  line-height: 14px;
+                  color: #b0e5f3;
+                  font-size: 20px;
+                  padding-left: 4px;
+                  border-left: 1px solid #b0e5f3;
+                  cursor: pointer;
+                  &::before {
+                      position: relative;
+                      top: 3px;
+                  }
+              }
+          } // 人脸检索
+          .faceSearch {
+              #upload {
+                  button {
+                      width: 3.3rem;
+                      height: 0.9rem;
+                      background-color: #009bc6;
+                      border: 1px solid #009bc6;
+                      span {
+                          font-size: 14px;
+                      }
+                  }
+                  .el-upload-list {
+                      li {
+                          border-radius: 0px;
+                          height: 184px;
+                          padding: 0px 10px 0px 80px;
+                          margin-top: 0px;
+                          border: 1px solid #4ddcd0;
+                          img {
+                              width: 182px;
+                              height: 100%;
+                              background-color: #009bc6;
+                          }
+                          a {
+                              display: none;
+                          }
+                          >i {
+                              &.el-icon-close {
+                                  z-index: 999;
+                                  color: #fff;
+                                  opacity: 1;
+                                  font-size: 18px;
+                                  border-radius: 50%;
+                                  background-color: rgba(252, 48, 44, .8);
+                                  display: block;
+                              }
+                          }
+                      }
+                  }
+              }
+          } // 假的图片
+          .fakeFace {
+              width: 182px;
+              height: 182px;
+              i {
+                  &.el-icon-close {
+                      z-index: 999;
+                      width: 18px;
+                      height: 18px;
+                      position: absolute;
+                      top: 45px;
+                      right: 8px;
+                      color: #fff;
+                      opacity: 1;
+                      font-size: 18px;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      background-color: rgba(252, 48, 44, .8);
+                  }
+              }
+              img {
+                  width: 100%;
+                  height: 100%;
+              }
+          }
+      } // 筛选
+      .selected {
+          position: absolute;
+          border: 1px solid #78d7ff;
+          background-color: #009bc6;
+          line-height: 41px;
+          height: 41px;
+          left: 21px;
+          margin-left: 7.5rem;
+          top: 40px;
+          >i {
+              position: relative;
+              left: -25px;
+              color: #fff;
+          }
+          >span {
+              line-height: 0.9rem;
+              padding-left: 0.2rem;
+              color: #31c8e3;
+              &::after {
+                  width: 1px;
+                  content: "";
+                  height: 0.5rem;
+                  background-color: #4ab0cd;
+                  position: absolute;
+                  top: 0.2rem;
+                  left: 1.2rem;
+              }
+          } // 时间选择
+          .el-date-editor {
+              border-radius: 5px;
+              background-color: #009bc6;
+              border: 0px solid #000;
+              width: 7.27rem;
+              padding: 3px 0px;
+              padding-left: 10px;
+              .el-range__icon {
+                  color: #fff;
+              }
+              &>input {
+                  background-color: #009bc6;
+                  color: #fff;
+              }
+              &>span {
+                  color: #fff;
+              }
+              .has-time {
+                  .el-date-range-picker__editor {
+                      input {
+                          background-color: #fff;
+                          color: #606266;
+                          border: 1px solid #dcdfe6;
+                      }
+                  }
+              }
+          }
+      } // 全部区域
+      .el-input {
+          width: 2.5rem;
+          input {
+              border: 0px solid #000;
+              border-radius: 5px;
+              background-color: #009bc6;
+              color: #fff;
+          }
+          .el-input__suffix {
+              left: 1.5rem;
+          }
+      } // 阈值
+      .PedestrianThreshold,
+      .maxVal {
+        width: 100px;
+        padding: 2px 0;
+        input {
+          border-left: 1px solid #78d7ff;
+          border-radius: 0;
+          text-align: center;
+          width: 80px;
+          padding: 0;
+        }
+        >span {
+          &.el-input__suffix {
+            position: absolute;
+            left: 90px;
+          }
+        }
+      } 
+      .PedestrianThreshold {
+        >span {
+          &.el-input__suffix {
+            position: absolute;
+            left: 75px;
+          }
+        }
+      }// 搜索
+      .searchBtn {
+          width: 2.5rem;
+          position: absolute; // left: 21rem;
+          margin-left: 19rem;
+          top: 40px;
+          height: 0.9rem;
+          button {
+              width: 2rem;
+              height: 0.97rem;
+              border-radius: 5px;
+              background-color: #31c8e3;
+              border: 1px solid #e0faff;
+              padding: 0;
+              span {
+                  color: #fff;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  line-height: 0.97rem;
+                  text-align: center;
+              }
+          }
+      } // 重新搜索
+      .searchAgain,.searchPedestrianAgain {
+          width: 2.5rem;
+          position: absolute; // left: 21rem;
+          margin-left: 17.8rem;
+          top: 40px;
+          height: 0.935rem;
+          button {
+              width: 2rem;
+              height: 0.93rem;
+              border-radius: 0px;
+              background-color: #009bc6;
+              border: 1px solid #31c8e3;
+              padding: 0;
+              span {
+                  color: #fff;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  line-height: 0.93rem;
+                  text-align: center;
+              }
+          }
+      } 
+      .searchPedestrianAgain {
+        margin-left: 13.2rem;
+      }
+      .uidSearchTrack,
+      .wifiTrack {
+        width: 2.5rem;
+        position: absolute; // left: 21rem;
+        margin-left: 19.8rem;
+        top: 40px;
+        height: 0.935rem;
+        background-color: #009bc6;
+        border: 1px solid #31c8e3;
+        label {
+          position: relative;
+          top: 10px;
+          span {
+            color: #fff;
+          }
+        }
+      }
+      .uidSearchTrack {
+        width: 6.8rem;
+        margin-left: 18.8rem;
+        .el-input__suffix {
+          left: 93%;
+        }
+        .el-input {
+          width: 6.5rem;
+          height: 40px;
+          input {
+            width: 6.5rem;
+            height: 40px;
+          }
+        }
+      }//切换展示
+      .change {
+          position: absolute;
+          right: 1.2rem;
+          top: 30px;
+          button {
+              height: 0.9rem;
+              width: 2.1rem; // width: 156px;
+              // height: 54px;
+              background-color: rgba(0, 0, 0, 0);
+              padding: 0;
+              border: 0px solid #000;
+              span {
+                  display: inline-block;
+                  width: 155px;
+                  height: 54px;
+                  background: url("../../assets/images/changeView.png") no-repeat;
+                  // background-size: 182px 57px;
+              }
+          }
+      }
+  } // 侧边的样式
+  #trackMask {
+      width: 271px;
+      height: 730px;
+      background-color: rgba(26, 32, 40, 0.7);
+      position: absolute;
+      left: 15px;
+      top: 70px; // 顶部
+      .result {
+          position: relative;
+          width: 100%;
+          font-size: 12px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-align: left;
+          padding-left: 10px;
+          color: #fff;
+          span {
+              font-size: 18px;
+              color: rgb(255, 239, 128);
+          }
+          i {
+              cursor: pointer;
+              margin-left: 15px;
+              font-size: 16px;
+              color: rgb(90, 232, 235);
+          }
+      } // 下边搜索结果
+      .open {
+          position: absolute;
+          width: 271px;
+          height: 680px;
+          overflow-y: auto;
+          left: 0;
+          li {
+              position: relative;
+              width: 271px;
+              padding: 10px 10px;
+              text-align: left;
+              &.addBg {
+                  background: url("../../assets/images/select_hl.png") no-repeat;
+                  background-size: 274px 320px;
+                  background-origin: padding-box;
+                  background-position: -3px -26px;
+              }
+              img {
+                  vertical-align: middle;
+                  width: 78px;
+                  height: 78px;
+                  background: url('../../assets/images/人员_hover.png');
+                  display: inline-block;
+                  border-radius: 50%; // position: relative;
+                  // left: -20px;
+              }
+              span {
+                  color: rgb(64, 239, 255);
+              }
+              i {
+                  padding-left: 10px;
+                  &.remark {
+                      padding: 0;
+                      position: absolute;
+                      top: 35px;
+                      right: 35px;
+                      width: 22px;
+                      height: 22px;
+                      display: inline-block;
+                      background: url("../../assets/images/remark.png");
+                  }
+                  &.noRemark {
+                      padding: 0;
+                      position: absolute;
+                      top: 35px;
+                      right: 35px;
+                      width: 22px;
+                      height: 22px;
+                      display: inline-block;
+                      background: url("../../assets/images/noRemark.png");
+                  }
+              } //  下边延伸出来的
+              ul {
+                  &::before {
+                      content: "";
+                      display: block;
+                      background-color: rgb(19, 151, 163);
+                      width: 240px;
+                      height: 1px;
+                      position: relative;
+                      top: -5px;
+                  }
+                  margin-top: 15px;
+                  padding: 0px 5px;
+                  li {
+                      &:nth-child(1),
+                      &:nth-child(2) {
+                          span {
+                              letter-spacing: 15px;
+                          }
+                      }
+                      padding: 5px 5px;
+                      text-align: left;
+                      span {
+                          color: #dceded;
+                          font-size: 12px;
+                      }
+                      i {
+                          color: #dceded;
+                          font-size: 12px;
+                      }
+                  }
+              }
+          }
+      } // 白色边框
+      .line {
+          position: absolute;
+          width: 271px;
+          height: 680px;
+          .lineTest {
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              &:nth-child(1) {
+                  left: -3px;
+                  top: -50px;
+                  border-top: 3px solid #fff;
+                  border-left: 3px solid #fff;
+              }
+              &:nth-child(2) {
+                  right: -3px;
+                  top: -50px;
+                  border-top: 3px solid #fff;
+                  border-right: 3px solid #fff;
+              }
+              &:nth-child(3) {
+                  left: -3px;
+                  bottom: -5px;
+                  border-bottom: 3px solid #fff;
+                  border-left: 3px solid #fff;
+              }
+              &:nth-child(4) {
+                  right: -3px;
+                  bottom: -5px;
+                  border-bottom: 3px solid #fff;
+                  border-right: 3px solid #fff;
+              }
+          }
+      }
+  }
+	// 行人检索侧边
+  #pedestrianTrackMask {
+      width: 206px;
+      height: 730px;
+      background-color: rgba(26, 32, 40, 0.7);
+      position: absolute;
+      left: 15px;
+			top: 70px; // 顶部
+      .result {
+          position: relative;
+          width: 100%;
+          font-size: 12px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-align: left;
+          padding-left: 10px;
+          color: #fff;
+          span {
+              font-size: 18px;
+              color: rgb(255, 239, 128);
+          }
+          i {
+              cursor: pointer;
+              margin-left: 15px;
+              font-size: 16px;
+              color: rgb(90, 232, 235);
+          }
+      }
+      .line {
+          position: absolute;
+          width: 206px;
+          height: 680px;
+          .lineTest {
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              &:nth-child(1) {
+                  left: -3px;
+                  top: -50px;
+                  border-top: 3px solid #fff;
+                  border-left: 3px solid #fff;
+              }
+              &:nth-child(2) {
+                  right: -3px;
+                  top: -50px;
+                  border-top: 3px solid #fff;
+                  border-right: 3px solid #fff;
+              }
+              &:nth-child(3) {
+                  left: -3px;
+                  bottom: -5px;
+                  border-bottom: 3px solid #fff;
+                  border-left: 3px solid #fff;
+              }
+              &:nth-child(4) {
+                  right: -3px;
+                  bottom: -5px;
+                  border-bottom: 3px solid #fff;
+                  border-right: 3px solid #fff;
+              }
+          }
+			}
+			.pedestrianResult {
+				width: 206px;
+				height: 683px;
+				position: relative;
+				overflow-y: scroll;
+				li {
+					width: 206px;
+					height: 80px;
+					margin-top: 40px;
+          background: url('/static/images/peopleList_focus_bg.png') no-repeat center center;
+					img {
+            margin-top: 2px;
+            width: 76px;
+            margin-top: 2px;
+						height: 76px;
+						border-radius: 50%;
+          }
+          &.selected {
+            width: 206px;
+            height: 124px;
+            margin-top: 30px;
+            background: url('/static/images/peopleList_bg.png') no-repeat center center;
+            img {
+              margin-top: 14px;
+              width: 96px;
+              height: 96px;
+              border-radius: 50%;
+            }
+          }
+				}
+      }
+      &.pedestrianTrackMask {
+        top: 130px;
+        height: 860px;
+        .line {
+          height: 810px;
+        }
+        .pedestrianResult{
+          height: 810px;
+        }
+      }
+  } // 切换展示
+  #videoPlay {
+      // width: 24.8rem;
+      width: 98.85%;
+      height: 99.6%;
+      background-color: #004158;
+      position: absolute;
+      left: 10px;
+      top: 0;
+      right: 0;
+      bottom: 0px;
+      border: 1px solid #1685ac;
+      .outer {
+          background-color: #004158;
+          height: 91.8%;
+          width: 100%;
+          position: relative;
+          top: 1.5rem;
+          overflow-y: auto;
+          .box {
+              float: left;
+              width: 32.5%;
+              height: 5.5rem;
+              margin-left: 0.15rem;
+              margin-bottom: 0.2rem;
+              background-color: #999;
+              position: relative;
+              box-sizing: border-box;
+              &.play {
+                  border: 1px solid #027887;
+              }
+              img {
+                  position: relative;
+              }
+              .btn {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateX(-50%);
+                  left: 50%;
+                  transform: translateY(-50%);
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                  background-color: rgba(26, 32, 40, 0);
+                  border: 0px solid #000;
+                  background-image: url('../../assets/images/play.png')
+              }
+              >span {
+                  display: block;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  width: 100%;
+                  position: absolute;
+                  line-height: 0.8rem;
+                  color: #fff;
+                  text-align: center; //   padding-left: 0.5rem;
+                  left: 0;
+                  top: 0;
+                  >i {
+                      width: 40px;
+                      height: 40px;
+                      background-color: tomato;
+                      background: url('../../assets/images/screen_toBig.png') no-repeat center center;
+                      float: right;
+                  }
+              }
+          } // 全屏样式
+          .fullScreenVideo {
+              // background: url(require('/assets/images/fullScreen_bg.png')) center center no-repeat;
+              width: 1920px;
+              height: 1080px;
+          }
+      }
+  } // 全屏的mask
+  #fullScreen,#fullPersonScreen{
+      .el-dialog {
+          margin: 0 0 50px 200px;
+          background-color: rgba(0, 0, 0, 0.8);
+          .el-dialog__header {
+              background-color: rgba(0, 0, 0, 0.3); // padding: 0;
+              span {
+                  color: #fff;
+              }
+              button {
+                  // background-color: rgba(100, 100, 100, 0.5);
+                  width: 31px;
+                  height: 31px;
+                  top: 12px;
+                  background: url('../../assets/images/screen_toSmall.png');
+                  i {
+                      font-size: 0px;
+                      &::before {
+                          color: #fff;
+                      }
+                  }
+              }
+          }
+          .el-dialog__body {
+              padding: 0;
+              height: 780px;
+              .btn {
+                  position: absolute;
+                  top: 50%;
+                  left: 48%;
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                  transform: translateY(-50%);
+                  transform: translateX(-50%);
+                  background-color: rgba(26, 32, 40, 0);
+                  border: 0px solid #000;
+                  outline: none;
+                  cursor: pointer;
+                  background-image: url('../../assets/images/play.png');
+              }
+              .btnShot {
+                  position: absolute;
+                  top: 13px;
+                  right: 90px;
+                  width: 67px;
+                  border: 0px solid #000;
+                  background: url('../../assets/images/btn_screenShot.png')
+              } // ==============截图==========
+              button {
+                  &::before {
+                      font-size: 20px;
+                      color: #fff;
+                  }
+              }
+              a {
+                  &::before {
+                      font-size: 20px;
+                      color: #fff;
+                  }
+              } // 人脸轨迹
+              .checkTrack {
+                  position: absolute;
+                  top: 15px;
+                  left: 180px;
+                  width: 20px;
+                  border: 0px solid #000;
+                  background: url('../../assets/images/checkTrack.png') no-repeat center center;
+              } // 新增重点人员
+              .addSuspectPerson {
+                  position: absolute;
+                  background-color: rgba(0, 0, 0, 0);
+                  top: 5px;
+                  left: 240px;
+                  width: 20px;
+                  border: 0px solid #000;
+              } // 下载
+              .download {
+                  position: absolute;
+                  display: inline-block;
+                  width: 40px;
+                  height: 44px;
+                  background-color: rgba(0, 0, 0, 0);
+                  top: 5px;
+                  left: 320px;
+                  line-height: 44px;
+                  border: 0px solid #000;
+              } // 退出
+              .exit {
+                  position: absolute;
+                  top: 5px;
+                  background-color: rgba(0, 0, 0, 0);
+                  left: 360px;
+                  width: 20px;
+                  border: 0px solid #000;
+              }
+              .reset {
+                  position: absolute;
+                  top: 50%;
+                  left: 48%;
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                  transform: translateY(-50%);
+                  transform: translateX(-50%);
+                  background-color: rgba(26, 32, 40, 0);
+                  border: 0px solid #000;
+                  outline: none;
+                  cursor: pointer;
+                  background-image: url('../../assets/images/playAgain.png');
+                  background-repeat: no-repeat;
+              }
+          }
+      }
+  } // 地图全屏
+  .fullMap {
+      background: url('../../assets/images/fullScreen_bg.png') top left;
+      &::before {
+          content: '';
+          background: url('../../assets/images/fullScreen_bg.png') left bottom;
+          z-index: 2147483647 !important;
+          height: 70px;
+          width: 70px;
+          position: absolute;
+          bottom: -25px;
+          left: 0px;
+          clip-path: polygon(0px 0px, 0px 70px, 72px 84px);
+      }
+      &::after {
+          content: '';
+          height: 180px;
+          width: 180px;
+          position: absolute;
+          bottom: -25px;
+          right: 0px;
+          z-index: 99999;
+          background: url("../../assets/images/fullScreen_bg.png") no-repeat bottom right;
+          clip-path: polygon(201px 0px, 180px 180px, 0 194px);
+      }
+      #elMain.elMain {
+          width: 100%;
+          margin: 0;
+          height: 1080px;
+          padding-top: 50px;
+          padding-left: 10px;
+          &::before {
+              content: '';
+              position: absolute;
+              bottom: -26px;
+              left: 10px;
+              width: 1900px;
+              height: 10px;
+              background: url("../../assets/images/fullScreen_bg.png") no-repeat center bottom;
+              z-index: 2147483647 !important;
+          }
+          &::after {
+              content: '';
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              width: 10px;
+              height: 905px;
+              background: url("../../assets/images/fullScreen_bg.png") no-repeat right top;
+              z-index: 2147483647 !important;
+          }
+          .searchTop {
+              position: absolute;
+              margin-top: 60px;
+          }
+          .allMap {
+              position: absolute;
+              &::before {
+                  content: '';
+                  height: 62px;
+                  width: 61px;
+                  position: absolute;
+                  top: -1px;
+                  right: 7px;
+                  z-index: 99999;
+                  background: url("../../assets/images/fullScreen_bg.png") no-repeat top right;
+                  background-position-y: -47px;
+                  clip-path: polygon(0px 0px, 70px 0px, 69px 81px);
+              }
+          }
+          #trackMask {
+              &.trackMask {
+                  position: absolute;
+                  margin-top: 70px;
+                  height: 825px;
+                  .line {
+                      height: 775px;
+                  }
+                  .open {
+                      height: 775px;
+                  }
+              }
+          }
+          #videoPlay {
+              left: 9px;
+              top: 50px;
+          }
+      }
+  } // 视频全屏的fullScreen
+  .funllScreenImg {
+      width: 1920px;
+      height: 1080px;
+  }
+  .mapAndVectorSwitch {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+  }

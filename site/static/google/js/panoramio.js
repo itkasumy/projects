@@ -1,0 +1,1 @@
+google.maps.__gjsload__('panoramio', function(_){var ax=function(a){this.setValues(a)};_.t(ax,_.y);_.sd(ax.prototype,{map:_.Ii,tag:_.Wh,userId:_.Wh});_.Ub.google.maps.panoramio={PanoramioLayer:ax};_.Xc("panoramio",{});});

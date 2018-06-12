@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const fmtLatLng = (array = array !== null ? array : []) => {
+      const coords = []
+      array.forEach(item => {
+        coords.push({lat: item.lat, lng: item.lng})
+      })
+      console.log(coords)
+      return coords
+    }
+    fmtLatLng(null)
+  </script>
+</body>
+</html>

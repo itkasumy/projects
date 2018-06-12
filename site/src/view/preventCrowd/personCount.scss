@@ -1,0 +1,259 @@
+.el-main {
+  position: relative;
+  background: url('/static/images/right_bg.png') 0 0 / 100% 100% no-repeat;
+  box-sizing: border-box;      
+  padding: 5px;
+  .realTime {
+    display: flex;
+    .mapbg {
+      position: relative;
+      width: 100%;
+      height: 605px;
+      background: url('/static/images/statistics_map_bg.png') 0 0 / 100% 100% no-repeat;    
+      .close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: url('/static/images/mapBtn_close.png') no-repeat;
+        top: 30px;
+        right: 20px;
+        z-index: 10;
+      }
+      .mapWrapper {
+        position: absolute;
+        top: 18px;
+        right: 8px;
+        bottom: 9px;
+        left: 18px;
+      }
+    }
+    .statisticsModule {
+      padding: 12px 15px 0 12px;
+      .statisticsResContainer {
+        width: 511px;
+        height: 161px;
+        position: relative;
+        background: url('/static/images/totalCount_bg.png') 0 0 / 100% 100% no-repeat;
+        .statisticsTitle {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 30px;
+          line-height: 30px;
+          padding-left: 10px;
+          color: #05605f;
+        }
+        .statisticsNumberWrapper {
+          display: flex;
+          li {
+            width: 60px;
+            height: 80px;
+            margin: 56px 8px 0 0;
+            // border-top: 1px solid #2FD4DD;
+            // border-right: 1px solid #3EE7F6; 
+            // border-bottom: 1px solid #109E9E;
+            // border-left: 1px solid #108D90;
+            // border-radius: 1px;
+            &:nth-child(1) {
+              margin-left: 12px;
+            }
+            &:nth-last-child(1) {
+              box-sizing: border-box;
+              border: none;
+              padding-top: 40px;
+              text-align: left;
+              font-size: 24px;
+              color: #60b3b3;
+            }
+          }
+        }
+      }
+  
+      .statisticsGraphWarpper {
+        .statisticsGraphTitleWrapper {
+          margin: 35px 0 20px;
+          height: 30px;
+          .statisticsTitle {
+            float: left;
+            position: relative;
+            line-height: 30px;
+            padding-left: 12px;
+            font-size: 16px;
+            text-align: left;
+            color: #fff;
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 5px;
+              width: 5px;
+              height: 20px;
+              background: #74fdfb;
+            }
+          }
+          .switchBtn {
+            float: left;
+            box-sizing: border-box;
+            width: 68px;
+            height: 24px;
+            line-height: 22px;
+            margin: 3px 0 0 10px;
+            border: 1px solid #2CC6FF;
+            border-radius: 3px;
+            background: rgba(96, 219, 255, 0.20);
+            color: #78e1ff;
+          }
+          .qiakouBtn {
+            float: right;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 25px;
+            border: none;
+            background: linear-gradient(to bottom, #26FFFC, #3064EF);
+            border-radius: 7px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .el-row:nth-child(2) {
+    margin-top: 26px;
+    padding-bottom: 16px;
+  }
+  .predict {
+    width: 543px;
+    height: 338px;
+    margin: 0 auto;
+    background: url('/static/images/predict_bg.png') 0 0 / 100% 100% no-repeat;
+    .predictTitle {
+      padding: 10px 0 30px;
+      font-size: 24px;
+      color: #1bf2ef;
+      text-shadow: 0 0 6px rgba(255, 255, 255, .6),  0 0 8px  rgba(255, 255, 255, .5),  0 0 10px rgba(255, 255, 255, .4);
+    }
+    .predictCon {
+      overflow-y: scroll;
+      width: 492px;
+      height: 134px;
+      margin-left: 24px;
+      .infoBox {
+        height: 134px;
+        float: left;
+        .areaInfo {
+          position: relative;
+          width: 82px;
+          height: 102px;
+          line-height: 102px;
+          box-sizing: border-box;
+          margin-left: -1px;
+          text-align: center;
+          color: #fff;
+          border: 1px solid #107B94;          
+        }
+        &:nth-child(6n+1) {
+          .areaInfo {
+            margin-left: 0;
+          }
+        }
+        &.lv1 {
+          .areaInfo {
+            background: rgba(158, 226, 255, .3);
+            border-color: #0090ff;
+            z-index: 1;
+            border-radius: 1px;
+            box-shadow:  0 0 5px #0090ff;
+          }
+        }
+        &.lv2 {
+          .areaInfo {
+            background: rgba(255, 227, 151, .3);
+            border-color: #ffeca2;
+            z-index: 1;
+            border-radius: 1px;
+            box-shadow:  0 0 5px #ffeca2;
+          }
+        }
+        &.lv3 {
+          .areaInfo {
+            background: rgba(248, 194, 128, .3);
+            border-color: #ff8a00;
+            z-index: 1;
+            border-radius: 1px;
+            box-shadow:  0 0 5px #ff8a00;
+          }
+        }
+        &.lv4 {
+          .areaInfo {
+            background: rgba(253, 180, 180, .3);
+            border-color: #ff0000;
+            z-index: 1;
+            border-radius: 1px;
+            box-shadow:  0 0 5px #ff0000;
+          }
+        }
+      }
+      .areaName {
+        width: 70px;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+    .predictClass {
+      padding-top: 20px;
+      height: 80px;
+      overflow-y: scroll;
+      .classWarning {
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        padding-left: 57px;
+        text-align: left;
+        color: #fff;
+        font-size: 16px;
+        .info {
+          width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;  
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 36px;
+          top: 6px;
+          width: 18px;
+          height: 18px;     
+        }
+        &.lv1 {
+          &::before {
+            background: url('/static/images/warn_blue.png') 0 0 / 100% 100% no-repeat;
+          }
+        }
+        &.lv2 {
+          &::before {
+            background: url('/static/images/warn_yellow.png') 0 0 / 100% 100% no-repeat;
+          }
+        }
+        &.lv3 {
+          &::before {
+            background: url('/static/images/warn_orange.png') 0 0 / 100% 100% no-repeat;
+          }
+        }
+        &.lv4 {
+          &::before {
+            background: url('/static/images/warn_red.png') 0 0 / 100% 100% no-repeat;
+          }
+        }
+      }
+    }
+  }
+} 

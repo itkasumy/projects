@@ -1,0 +1,80 @@
+@mixin setNumBg ($len, $url) {
+  width: $len;
+  height: $len;
+  line-height: $len;
+  background: url($url) no-repeat;
+}
+
+@mixin startEndWithPng ($url) {
+  position: relative;
+  width: 100px;
+  height: 68px;
+  line-height: 68px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  &::before {
+    @include fakeClass(20px, 24px);
+    left: 0;
+    background: url("../../assets/images/index_InSelected.png") 0 0 / 20px 20px no-repeat;
+  }
+  &.active {
+    &::before {
+      background: url("../../assets/images/index_selected.png") 0 0 / 20px 20px no-repeat;
+    }
+  }
+  &::after {
+    @include fakeClass(20px, 24px);
+    right: 0;
+    background: url($url) no-repeat;
+  }
+}
+
+@mixin fakeClass ($len, $top) {
+  position: absolute;
+  content: "";
+  width: $len;
+  height: $len;
+  top: $top;
+}
+
+@mixin setCenterScan ($url) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  background: url($url);
+}
+
+@mixin personTrack ($width, $height) {
+  float: left;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin setPosTopLeft ($top, $left, $width, $height, $url) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  background: url($url) no-repeat;
+}
+
+@mixin setPosTopRight ($top, $right, $width, $height, $url) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  width: $width;
+  height: $height;
+  background: url($url) no-repeat;
+}

@@ -1,0 +1,8 @@
+@mixin setMap ($top, $left, $width, $height, $url) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  background: url($url) no-repeat;
+}

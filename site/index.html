@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>光启超级智能追踪平台</title>
+    <!-- <link rel="stylesheet" href="./src/common/css/aliplayer-min.css"> -->
+    <link rel="shortcut icon" href="static/images/favicon.ico"/>
+    <script type="text/javascript" src="static/maps/js/video.js"></script>
+    <script type="text/javascript" src="static/maps/js/jQuery.js"> </script>
+    <script type="text/javascript" src="static/google/js/main.js"></script>
+    <script type="text/javascript" src="static/google/js/InfoBox_min.js"></script>  
+    <script type="text/javascript" src="static/google/js/drawing.js"></script>
+    <script type="text/javascript" src="static/google/js/maplabel-compiled.js"></script>
+    <script type="text/javascript" src="static/google/js/geometry.js"></script>
+    <script type="text/javascript" src="static/google/js/places.js"></script>
+    <script type="text/javascript" src="static/google/js/visualization.js"></script>
+    <script type="text/javascript" src="static/google/js/common.js"></script>
+    <script type="text/javascript" src="static/google/js/map.js"></script>
+    <script type="text/javascript" src="static/google/js/util.js"></script>
+    <script type="text/javascript" src="static/google/js/stats.js"></script>
+    <script type="text/javascript" src="static/google/js/onion.js"></script>
+    <script type="text/javascript" src="static/google/js/controls.js"></script>
+    <script type="text/javascript" src="static/google/js/marker.js"></script>
+    <script type="text/javascript" src="static/google/js/infowindow.js"></script>
+    <script type="text/javascript" src="static/google/js/overlay.js"></script>
+    <script type="text/javascript" src="static/google/js/drawing_impl.js"></script>
+    <script type="text/javascript" src="static/google/js/poly.js"></script>
+    <script type="text/javascript" src="static/google/js/markerclusterer.js"></script>
+    
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script>
+        $(function () {
+            videojs.options.flash.swf = 'static/maps/swf/video-js.swf'
+        })
+        !(function (doc , win) {
+            let docE1 = doc.documentElement,
+            resizeEvt = 'orientationchange' in window? 'orientationchange' : 'resize',
+            recalc = function () {  
+                let clientWidth = docE1.clientWidth;
+                if(!clientWidth) return;
+                if(clientWidth < 1550){
+                    docE1.style.fontSize = 32 * (clientWidth / 1024) + 'px';
+                }else{
+                    docE1.style.fontSize = "46px";
+                }
+            }
+            if(!doc.addEventListener) return;
+            win.addEventListener(resizeEvt , recalc , false);
+            doc.addEventListener('DOMContentLoaded',recalc,false)
+        })(document,window)
+  </script>
+</html>

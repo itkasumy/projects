@@ -1,0 +1,273 @@
+/* 初始化样式 */
+body{ margin:0 auto; padding:0; width:100%; color:#333; font:14px/1.5 Arial,"Microsoft Yahei"; text-align:center; background:#f5f5f5; -webkit-font-smoothing:antialiased; }
+input,button,select,textarea,img,p,h1,h2,h3,h4,h5{ margin:0; padding:0; border:0; font-family:'Microsoft YaHei','微软雅黑'; }
+a{ color:#333; text-decoration:none; }
+a:hover{ color:#34ad2a; text-decoration:none; -webkit-transition: all 0.2s linear;transition: all 0.2s linear; }
+ol,ul,li,dl,dd{ margin:0 auto; padding:0; list-style-type:none; }
+i,em{ font-style:normal; }
+table { border-collapse:collapse; border-spacing:0; }
+/* 浮动 */
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/* =======================================================主体的公共样式====================================== */
+/*Clear Fix*/ 
+.clearfix:after{ content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix{ display:inline-block; } 
+.clearfix { display:block; } 
+/*   */
+.el-header {
+    background-color: #fff;
+    line-height: 40px;
+    border-radius: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.el-main {
+    background-color: #fff;
+    height: 840px;
+    border-radius: 5px;
+    margin: 0 10px 10px 10px;
+    box-sizing: border-box;
+}
+/* =======================================================主体的公共样式====================================== */
+/* =====================================================================侧边栏的样式 =============================================*/
+/* 侧边栏的样式 */
+/* 单独首页样式*/
+#aside>ul{
+    /* width: 201px; */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8%;
+}
+#aside> ul >li.el-menu-item:nth-child(1){
+    border-radius: 20px;
+    background-color: rgb(30, 108, 132);
+    height: 35px;
+    margin: 26px 0 0 0;
+    padding-left: 17px !important;
+    text-align: left;
+    line-height: 35px;
+    color: #a1cbd1;
+    font-size: 16px;
+}
+/* 首页 */
+#aside> ul >li.el-menu-item:nth-child(1) i {
+    background: url("../../assets/images/menuicon_d_03.png");
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 10px;
+    background-size: contain;
+
+}
+/* 单独首页样式*/
+/*第二级到系统设置了*/ 
+#aside ul li{
+    /* color: #a1cbd1; */
+    color: #cde5e9;  
+    margin-bottom: 5px;
+}
+#aside> ul >li >div{
+    color: #59edff;
+    font-size: 16px;
+    text-align: left;
+}
+#aside> ul >li >div:hover {
+    background: rgba(0, 0, 0, 0);
+}
+#aside> ul >li >div span{
+    padding-left: 15px;
+    
+}
+#aside> ul >li >div>i{
+    background: url('../../assets/images/menu_jiao_05.png');
+    width: 12px;
+    height: 7px;
+    transform: rotateZ(90deg);
+    position: relative;
+    left: 4px;
+    top: 3px;
+}
+#aside > ul > li.is-opened > div > i {
+    transform: rotateZ(180deg);
+}
+#aside> ul >li >div>i::before {
+    font-size: 0;
+}
+/*第二级到系统设置了*/ 
+
+/* 第三级到用户管理了 */ 
+#aside> ul >li>ul>li>ul {
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#aside> ul >li>ul>li>ul>li {
+    border-radius: 30px;
+    height: 34px;
+    min-width: 150px;
+    color: #bad8dd;
+}
+#aside> ul >li>ul>li>ul>li:hover{
+    /* background: linear-gradient(to right , rgb(40, 113, 220) , rgb(64, 239, 255)); */
+    background: rgba(0, 0, 0, 0);
+}
+#aside> ul >li>ul>li>ul>li.is-active{
+    background: linear-gradient(to right , rgb(40, 113, 220) , rgb(64, 239, 255));
+    color: #fff;
+}
+#aside> ul >li>ul>li>ul>li>i{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    display: inline-block;
+    left: -5px;
+    vertical-align: middle;
+}
+#aside> ul >li>ul>li>ul>li:nth-child(1)>i{
+    background: url('../../assets/images/leftmenu_ico_06.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(2)>i{
+    background: url('../../assets/images/leftmenu_ico_08.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(3)>i{
+    background: url('../../assets/images/leftmenu_ico_10.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(4)>i{
+    background: url('../../assets/images/leftmenu_ico_12.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(5)>i{
+    background: url('../../assets/images/leftmenu_ico_14.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(6)>i{
+    background: url('../../assets/images/leftmenu_ico_16.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(7)>i{
+    background: url('../../assets/images/leftmenu_ico_18.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(8)>i{
+    background: url('../../assets/images/leftmenu_ico_20.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(9)>i{
+    background: url('../../assets/images/leftmenu_ico_22.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(1)>.box{
+    background: url('../../assets/images/leftmenu_ico_24.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(2)>.box{
+    background: url('../../assets/images/leftmenu_ico_26.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(3)>.box{
+    background: url('../../assets/images/leftmenu_ico_28.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(1)>.box2{
+    background: url('../../assets/images/leftmenu_ico_30.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(2)>.box2{
+    background: url('../../assets/images/leftmenu_ico_32.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(3)>.box2{
+    background: url('../../assets/images/leftmenu_ico_48.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(4)>.box2{
+    background: url('../../assets/images/leftmenu_ico_34.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(5)>.box2{
+    background: url('../../assets/images/leftmenu_ico_36.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(1)>.box3{
+    background: url('../../assets/images/leftmenu_ico_38.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(2)>.box3{
+    background: url('../../assets/images/leftmenu_ico_40.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(3)>.box3{
+    background: url('../../assets/images/leftmenu_ico_42.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(4)>.box3{
+    background: url('../../assets/images/leftmenu_ico_43.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(1)>.box4{
+    background: url('../../assets/images/leftmenu_ico_44.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(2)>.box4{
+    background: url('../../assets/images/leftmenu_ico_46.png');
+}
+#aside> ul >li>ul>li>ul>li:nth-child(3)>.box4{
+    background: url('../../assets/images/leftmenu_ico_43.png');
+}
+/* 第三级到用户管理了 */ 
+
+/* =====================================================================侧边栏的样式 =============================================*/
+/* ====================================================滚动条的样式============================================================ */
+::-webkit-scrollbar {
+    /* 垂直滚动条的宽高 */
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-track-piece {
+    /* 滚动条背景和圆角 */
+    background:#004158;
+}
+/* ====================================================滚动条的样式============================================================ */
+
+
+/* reset input fontsize */
+.el-input--small .el-input__inner {
+  font-size: 12px;
+}
+#allMap {
+    border-radius: 10px;
+    position: relative;
+}
+.divTable
+{
+    display:  table;
+    width:253px;
+    border-spacing:5px;/*cellspacing:poor IE support for  this*/
+   /* border-collapse:separate;*/
+   margin: 10px 0 0 10px;
+}
+
+.divRow
+{
+   display:table-row;
+   width:auto;
+}
+
+.divCell-first
+{
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;
+    width:48px;
+    margin: 0 10px 4px 0;
+    text-align: left;
+}
+.divCell-second
+{
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;
+    width:180px;
+    text-align: left;
+}
+
+
+/* 打包以后会导致input 的 placeholder的颜色被重置为#fff,需要将其重置 */
+input::-webkit-input-placeholder{
+    /*Webkit browsers*/
+    color: rgb(192,196,204) !important;
+}
+input::-moz-input-placeholder{
+    /*Mozilla browsers*/
+    color: rgb(192,196,204) !important;
+}
+input::-ms-input-placeholder{
+    /*Internet browsers*/
+    color: rgb(192,196,204) !important;
+}
+
