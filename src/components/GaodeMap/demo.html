@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>地图API－范例－关键字搜索</title>
+	<meta content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta tabindex="">
+	<link rel="stylesheet" type="text/css" href="apidemos/sourceLinks/style.css" />
+	<script type="text/javascript" src="http://172.19.59.8:25001/as/webapi/js/auth?v=1.0&t=jsmap&ak=您申请的key"></script>
+	
+</head>
+<body  style="margin:0px;padding:0px">
+	<div id="map"  style="width:100%;height:100%;"></div>
+	<div id="panel" class="contro_panel_button contro_panel_position_lr" style="width:278px;">
+		<div style='font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;color: #565656;font-size: 12px;line-height: 22px;word-wrap: break-word;background-color: #fff;border: 1px solid silver;'>
+			<div id="resultDiv" style="background: #fff;">
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var map, markers=[], poiSearch, zIndexMarker;
+		function initMap(){
+			map=new IMAP.Map("map", {
+				zoom : 9,//设置地图初始化级别
+				maxZoom : 18,
+				center : new IMAP.LngLat(121.455536,31.249452),//设置地图中心点坐标
+				animation : true//设置地图缩放动画效果
+			});
+			doSearch(1);
+		}
+		function doSearch(pageNo){
+			if(map){
+				var keyword=didian,city=chengshi;
+				map.plugin(['IMAP.PoiSearch'], function(){
+					poiSearch=new IMAP.PoiSearch({panel: "resultDiv",map: map, pageSize: 8, scope: "all"});
+					poiSearch.setPageNumber(parseInt(pageNo-1));
+					poiSearch.search(keyword,city);
+				});
+			}
+		}
+		initMap(); addRoadNetLayer() //添加路网图层
+	</script>
+</body>
+</html>

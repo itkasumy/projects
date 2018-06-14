@@ -1,0 +1,226 @@
+[
+  {
+    "name": "汉族",
+    "en": "Han"
+  },
+  {
+    "name": "蒙古族",
+    "en": "Manchu"
+  },
+  {
+    "name": "回族",
+    "en": "Hui"
+  },
+  {
+    "name": "藏族",
+    "en": "Tibetan"
+  },
+  {
+    "name": "维吾尔族",
+    "en": "Uyghur"
+  },
+  {
+    "name": "苗族",
+    "en": "Miao"
+  },
+  {
+    "name": "彝族",
+    "en": "Yi"
+  },
+  {
+    "name": "壮族",
+    "en": "Zhuang"
+  },
+  {
+    "name": "布依族",
+    "en": "Buyei"
+  },
+  {
+    "name": "朝鲜族",
+    "en": "Korean"
+  },
+  {
+    "name": "满族",
+    "en": "Manchu"
+  },
+  {
+    "name": "侗族",
+    "en": "Dong"
+  },
+  {
+    "name": "瑶族",
+    "en": "Yao"
+  },
+  {
+    "name": "白族",
+    "en": "Bai"
+  },
+  {
+    "name": "土家族",
+    "en": "Tujia"
+  },
+  {
+    "name": "哈尼族",
+    "en": "Hani"
+  },
+  {
+    "name": "哈萨克族",
+    "en": "Kazakh"
+  },
+  {
+    "name": "傣族",
+    "en": "Dai"
+  },
+  {
+    "name": "黎族",
+    "en": "Li"
+  },
+  {
+    "name": "傈僳族",
+    "en": "Lisu"
+  },
+  {
+    "name": "佤族",
+    "en": "Va"
+  },
+  {
+    "name": "畲族",
+    "en": "She"
+  },
+  {
+    "name": "高山族",
+    "en": "Gaoshan"
+  },
+  {
+    "name": "拉祜族",
+    "en": "Lahu"
+  },
+  {
+    "name": "水族",
+    "en": "Shui"
+  },
+  {
+    "name": "东乡族",
+    "en": "Dongxiang"
+  },
+  {
+    "name": "纳西族",
+    "en": "Nakhi"
+  },
+  {
+    "name": "景颇族",
+    "en": "Jingpo"
+  },
+  {
+    "name": "柯尔克孜族",
+    "en": "Kyrgyz"
+  },
+  {
+    "name": "土族",
+    "en": "Monguor"
+  },
+  {
+    "name": "达斡尔族",
+    "en": "Daur"
+  },
+  {
+    "name": "仫佬族",
+    "en": "Mulao"
+  },
+  {
+    "name": "羌族",
+    "en": "Qiang"
+  },
+  {
+    "name": "布朗族",
+    "en": "Blang"
+  },
+  {
+    "name": "撒拉族",
+    "en": "Salar"
+  },
+  {
+    "name": "毛南族",
+    "en": "Maonan"
+  },
+  {
+    "name": "仡佬族",
+    "en": "Gelao"
+  },
+  {
+    "name": "锡伯族",
+    "en": "Xibe"
+  },
+  {
+    "name": "阿昌族",
+    "en": "Achang"
+  },
+  {
+    "name": "普米族",
+    "en": "Pumi"
+  },
+  {
+    "name": "塔吉克族",
+    "en": "Tajik"
+  },
+  {
+    "name": "怒族",
+    "en": "Nu"
+  },
+  {
+    "name": "乌孜别克族",
+    "en": "Uzbek"
+  },
+  {
+    "name": "俄罗斯族",
+    "en": "Russian"
+  },
+  {
+    "name": "鄂温克族",
+    "en": "Evenk"
+  },
+  {
+    "name": "德昂族",
+    "en": "Deang"
+  },
+  {
+    "name": "保安族",
+    "en": "Bonan"
+  },
+  {
+    "name": "裕固族",
+    "en": "Yughur"
+  },
+  {
+    "name": "京族",
+    "en": "Kinh"
+  },
+  {
+    "name": "塔塔尔族",
+    "en": "Tatar"
+  },
+  {
+    "name": "独龙族",
+    "en": "Derung"
+  },
+  {
+    "name": "鄂伦春族",
+    "en": "Oroqen"
+  },
+  {
+    "name": "赫哲族",
+    "en": "Nanai"
+  },
+  {
+    "name": "门巴族",
+    "en": "Monpa"
+  },
+  {
+    "name": "珞巴族",
+    "en": "Lhoba"
+  },
+  {
+    "name": "基诺族",
+    "en": "Jino"
+  }
+]

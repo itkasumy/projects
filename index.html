@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>警用智能头盔后台控制系统</title>
+    <link rel="stylesheet" href="/static/css/videjs.css">
+    <!-- <link rel="stylesheet" href="/static/css/IMap.css">
+    <script src="/static/js/Map.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/IMapStreetView.js"></script> -->
+    <!-- <script src="/static/js/totenKey.js"></script> -->
+    <script>
+      // document.write('<script type="text/javascript" src="http://114.215.146.210:25001/as/webapi/js/auth?v=1.0&t=jsmapconfig&ak=ec85d3648154874552835438ac6a02b2"><\/script>');
+    </script>
+    <script type="text/javascript">
+      var host = '172.19.60.6'
+      document.write('<script type="text/javascript" src="http://' + host + ':25001/as/webapi/js/auth?v=2.0&t=jsmap&ak=ec85d3648154874552835438ac6a02b2"><\/script>')
+    </script>
+    <!-- <script type="text/javascript" src="http://172.19.60.6:25001/as/webapi/js/auth?v=2.0&t=jsmap&ak=ec85d3648154874552835438ac6a02b2"></script> -->
+    <script src="/static/js/sockjs.min.js"></script>
+    <script src="/static/easy-player/dist/component/easy-player-lib.min.js"></script>
+    <style>
+      html, body, #app {
+        height: 100%;
+      }
+      ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      p {
+        margin: 0;
+      }
+      .vjs-big-play-button {
+        top: inherit!important;
+        left: inherit!important;
+        bottom: 10px;
+        right: 10px;
+      }
+      ::-webkit-scrollbar {  
+        width: 0px;
+        height: 0px;
+        background-color: transparent;
+      }
+      .el-message {
+        font-size: 16px;
+      }
+      .el-message-icon {
+        font-size: 16px;
+      }
+    </style>
+    <script>
+      function setRootFontsize () {
+        var html = document.querySelector('html');
+        var width = html.getBoundingClientRect().width;
+        html.style.fontSize = width / 10 + 'px';
+      }
+      setRootFontsize()
+      onresize = setRootFontsize()
+    </script>
+    <style>
+      body {
+        background: url("/static/images/bg.png") 0 0 / 100% 100% no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <!-- <script src="http://vjs.zencdn.net/5.5.3/video.js"></script> -->
+</html>
